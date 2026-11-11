@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>바인더스 Binders · 대신 말해 주는 자료를 만듭니다</title>
+<meta name="description" content="회사 소개서, 제품 소개서, 제품 카탈로그, IR 자료, 상세페이지, 연출컷. 기업을 이해하고 모든 영업·판매 자료를 이어서 만드는 파트너, 바인더스입니다.">
+<meta property="og:title" content="바인더스 Binders">
+<meta property="og:description" content="대신 말해 주는 자료를 만듭니다. BIND YOUR STORY">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#2447F5">
+<!-- 임시 공개 기간: 검색 제외. 정식 공개 때 아래 한 줄과 robots.txt를 지운다 -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23fff'/%3E%3Cpath d='M12 12h28v28H12z' fill='none' stroke='%230B1437' stroke-width='3'/%3E%3Cpath d='M20 20h28v28H20z' fill='%23fff' stroke='%230B1437' stroke-width='3'/%3E%3Cpath d='M28 28h28v28H28z' fill='%232447F5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- 로고(A5 + Binders 글자 잠금형). 기호만 따로 쓰지 않는다 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 241 68">
+    <path d="M33 9H1V41H33V9Z" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M41.5 17.5H9.5V49.5H41.5V17.5Z" style="fill:var(--logo-mid)" stroke="currentColor" stroke-width="2"/>
+    <path d="M52 26H18V60H52V26Z" style="fill:var(--logo-front)"/>
+    <path fill="currentColor" d="M75.5 53V17H89.65C91.9333 17 93.85 17.4667 95.4 18.4C96.95 19.3333 98.1167 20.5417 98.9 22.025C99.6833 23.4917 100.075 25.0417 100.075 26.675C100.075 28.6583 99.5833 30.3583 98.6 31.775C97.6333 33.1917 96.325 34.1583 94.675 34.675L94.625 33.45C96.925 34.0167 98.6917 35.125 99.925 36.775C101.158 38.4083 101.775 40.3167 101.775 42.5C101.775 44.6167 101.35 46.4583 100.5 48.025C99.6667 49.5917 98.4417 50.8167 96.825 51.7C95.225 52.5667 93.2833 53 91 53H75.5ZM80.8 48.025H90.2C91.3833 48.025 92.4417 47.8 93.375 47.35C94.325 46.9 95.0667 46.2583 95.6 45.425C96.15 44.575 96.425 43.5667 96.425 42.4C96.425 41.3167 96.1833 40.3417 95.7 39.475C95.2333 38.5917 94.55 37.9 93.65 37.4C92.7667 36.8833 91.725 36.625 90.525 36.625H80.8V48.025ZM80.8 31.7H89.575C90.5417 31.7 91.4083 31.5083 92.175 31.125C92.9583 30.725 93.575 30.1583 94.025 29.425C94.4917 28.675 94.725 27.775 94.725 26.725C94.725 25.325 94.2583 24.175 93.325 23.275C92.3917 22.375 91.1417 21.925 89.575 21.925H80.8V31.7ZM105.25 21.575V16.5H110.475V21.575H105.25ZM105.25 53V26H110.475V53H105.25ZM134.932 53V39.725C134.932 38.675 134.841 37.6 134.657 36.5C134.491 35.3833 134.157 34.35 133.657 33.4C133.174 32.45 132.482 31.6833 131.582 31.1C130.699 30.5167 129.541 30.225 128.107 30.225C127.174 30.225 126.291 30.3833 125.457 30.7C124.624 31 123.891 31.4917 123.257 32.175C122.641 32.8583 122.149 33.7583 121.782 34.875C121.432 35.9917 121.257 37.35 121.257 38.95L118.007 37.725C118.007 35.275 118.466 33.1167 119.382 31.25C120.299 29.3667 121.616 27.9 123.332 26.85C125.049 25.8 127.124 25.275 129.557 25.275C131.424 25.275 132.991 25.575 134.257 26.175C135.524 26.775 136.549 27.5667 137.332 28.55C138.132 29.5167 138.741 30.575 139.157 31.725C139.574 32.875 139.857 34 140.007 35.1C140.157 36.2 140.232 37.1667 140.232 38V53H134.932ZM115.957 53V26H120.632V33.8H121.257V53H115.957ZM155.127 53.75C152.611 53.75 150.436 53.125 148.602 51.875C146.786 50.625 145.377 48.925 144.377 46.775C143.394 44.6083 142.902 42.175 142.902 39.475C142.902 36.7583 143.402 34.3333 144.402 32.2C145.402 30.05 146.819 28.3583 148.652 27.125C150.502 25.875 152.694 25.25 155.227 25.25C157.777 25.25 159.919 25.875 161.652 27.125C163.402 28.3583 164.719 30.05 165.602 32.2C166.502 34.35 166.952 36.775 166.952 39.475C166.952 42.175 166.502 44.6 165.602 46.75C164.702 48.9 163.377 50.6083 161.627 51.875C159.877 53.125 157.711 53.75 155.127 53.75ZM155.852 49.025C157.569 49.025 158.969 48.6167 160.052 47.8C161.136 46.9833 161.927 45.8583 162.427 44.425C162.927 42.9917 163.177 41.3417 163.177 39.475C163.177 37.6083 162.919 35.9583 162.402 34.525C161.902 33.0917 161.119 31.975 160.052 31.175C159.002 30.375 157.661 29.975 156.027 29.975C154.294 29.975 152.869 30.4 151.752 31.25C150.636 32.1 149.802 33.2417 149.252 34.675C148.719 36.1083 148.452 37.7083 148.452 39.475C148.452 41.2583 148.719 42.875 149.252 44.325C149.802 45.7583 150.619 46.9 151.702 47.75C152.802 48.6 154.186 49.025 155.852 49.025ZM163.177 53V33.575H162.577V17H167.827V53H163.177ZM184.797 53.75C182.114 53.75 179.756 53.1667 177.722 52C175.706 50.8167 174.131 49.175 172.997 47.075C171.881 44.9583 171.322 42.5083 171.322 39.725C171.322 36.775 171.872 34.2167 172.972 32.05C174.089 29.8833 175.639 28.2083 177.622 27.025C179.606 25.8417 181.914 25.25 184.547 25.25C187.297 25.25 189.639 25.8917 191.572 27.175C193.506 28.4417 194.947 30.25 195.897 32.6C196.864 34.95 197.247 37.7417 197.047 40.975H191.822V39.075C191.789 35.9417 191.189 33.625 190.022 32.125C188.872 30.625 187.114 29.875 184.747 29.875C182.131 29.875 180.164 30.7 178.847 32.35C177.531 34 176.872 36.3833 176.872 39.5C176.872 42.4667 177.531 44.7667 178.847 46.4C180.164 48.0167 182.064 48.825 184.547 48.825C186.181 48.825 187.589 48.4583 188.772 47.725C189.972 46.975 190.906 45.9083 191.572 44.525L196.697 46.15C195.647 48.5667 194.056 50.4417 191.922 51.775C189.789 53.0917 187.414 53.75 184.797 53.75ZM175.172 40.975V36.9H194.447V40.975H175.172ZM200.656 53V26H205.306V32.55L204.656 31.7C204.99 30.8333 205.423 30.0417 205.956 29.325C206.49 28.5917 207.106 27.9917 207.806 27.525C208.49 27.025 209.248 26.6417 210.081 26.375C210.931 26.0917 211.798 25.925 212.681 25.875C213.565 25.8083 214.415 25.85 215.231 26V30.9C214.348 30.6667 213.365 30.6 212.281 30.7C211.215 30.8 210.231 31.1417 209.331 31.725C208.481 32.275 207.806 32.9417 207.306 33.725C206.823 34.5083 206.473 35.3833 206.256 36.35C206.04 37.3 205.931 38.3083 205.931 39.375V53H200.656ZM227.341 53.725C224.057 53.725 221.382 53 219.316 51.55C217.249 50.1 215.982 48.0583 215.516 45.425L220.866 44.6C221.199 46 221.966 47.1083 223.166 47.925C224.382 48.725 225.891 49.125 227.691 49.125C229.324 49.125 230.599 48.7917 231.516 48.125C232.449 47.4583 232.916 46.5417 232.916 45.375C232.916 44.6917 232.749 44.1417 232.416 43.725C232.099 43.2917 231.424 42.8833 230.391 42.5C229.357 42.1167 227.782 41.6417 225.666 41.075C223.349 40.475 221.507 39.8333 220.141 39.15C218.791 38.45 217.824 37.6417 217.241 36.725C216.674 35.7917 216.391 34.6667 216.391 33.35C216.391 31.7167 216.824 30.2917 217.691 29.075C218.557 27.8583 219.774 26.9167 221.341 26.25C222.924 25.5833 224.774 25.25 226.891 25.25C228.957 25.25 230.799 25.575 232.416 26.225C234.032 26.875 235.341 27.8 236.341 29C237.341 30.1833 237.941 31.575 238.141 33.175L232.791 34.15C232.607 32.85 231.999 31.825 230.966 31.075C229.932 30.325 228.591 29.9167 226.941 29.85C225.357 29.7833 224.074 30.05 223.091 30.65C222.107 31.2333 221.616 32.0417 221.616 33.075C221.616 33.675 221.799 34.1833 222.166 34.6C222.549 35.0167 223.282 35.4167 224.366 35.8C225.449 36.1833 227.049 36.6417 229.166 37.175C231.432 37.7583 233.232 38.4083 234.566 39.125C235.899 39.825 236.849 40.6667 237.416 41.65C237.999 42.6167 238.291 43.7917 238.291 45.175C238.291 47.8417 237.316 49.9333 235.366 51.45C233.432 52.9667 230.757 53.725 227.341 53.725Z"/>
+  </symbol>
+</svg>
+
+<a class="skip" href="#contact">문의로 바로 가기</a>
+
+<header class="head" id="top">
+  <div class="head-in">
+    <a class="brand" href="#top" aria-label="바인더스 Binders 처음으로"><svg class="logo" viewBox="0 0 241 68" role="img" aria-label="Binders"><use href="#logo"/></svg></a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#why">필요한 이유</a>
+      <a href="#work">작업물</a>
+      <a href="#service">서비스</a>
+      <a href="#note">바인딩 노트</a>
+      <a href="#process">진행 방식</a>
+    </nav>
+    <a class="cta-top" href="#contact">문의하기<span aria-hidden="true">→</span></a>
+  </div>
+</header>
+
+<main>
+
+<!-- ───── 표지 ───── -->
+<section class="hero">
+  <div class="wrap">
+    <p class="hero-top"><span>Binders</span><span>BIND YOUR STORY</span></p>
+    <h1 class="hero-title">
+      <span class="ln">무언가를 제안할 때,</span>
+      <span class="ln">거래처에 회사를 소개할 때,</span>
+      <span class="ln ac">무엇을 보내시나요?</span>
+    </h1>
+    <div class="hero-sub">
+      <p class="hero-lead">기업을 이해하고, 모든 영업·판매 자료를 이어서 만드는 파트너. 바인더스는 <b>대신 말해 주는 자료</b>를 만듭니다.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#contact">문의하기<span aria-hidden="true">→</span></a>
+        <a class="link" href="#work">작업물 보기</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="reel" aria-label="바인더스가 만든 샘플 자료 미리보기">
+    <div class="reel-track" id="reelTrack"></div>
+  </div>
+
+  <div class="wrap">
+    <ul class="kinds" aria-label="만드는 자료">
+      <li>회사 소개서</li><li>제품 소개서</li><li>제품 카탈로그</li><li>IR 자료</li><li>상세페이지</li><li>연출컷</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ───── 01 공감 ───── -->
+<section class="sec" id="empathy">
+  <div class="wrap grid-sec">
+    <header class="sec-head">
+      <p class="label"><span>01</span>이런 순간</p>
+      <h2>이런 순간,<br>있으셨나요?</h2>
+      <p class="sec-sub">회사와 아이템은 좋은데, 자료가 그만큼 말해 주지 못하는 순간들입니다.</p>
+    </header>
+    <div class="sec-body">
+      <ol class="rows">
+        <li class="reveal"><span class="n">01</span><h3>초라한 디자인이<br>좋은 회사를 가릴 때</h3><p>거래처 담당자가 물었는데, 보낼 파일이 오래됐거나 없습니다</p></li>
+        <li class="reveal"><span class="n">02</span><h3>수많은 정보가 흩어져<br>정리가 안 될 때</h3><p>사양, 인증, 실적이 흩어져 있어 매번 설명이 길어집니다</p></li>
+        <li class="reveal"><span class="n">03</span><h3>급하게 만든 자료에<br>좋은 제품과 서비스가 묻힐 때</h3><p>입점이나 납품 제안 마감 전날, 자료를 처음부터 만들어야 합니다</p></li>
+      </ol>
+      <div class="quotes reveal">
+        <p>“소개서 있으세요?”</p>
+        <p>“제품소개서는 따로 없나요?”</p>
+        <p>“이번주 안에 가능할까요?”</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── 02 왜 필요한가 ───── -->
+<section class="sec" id="why">
+  <div class="wrap grid-sec">
+    <header class="sec-head">
+      <p class="label"><span>02</span>왜 필요한가</p>
+      <h2>잘 만든 자료는<br>회사 대신 말해 주는<br><em>영업 담당</em>입니다</h2>
+    </header>
+    <div class="sec-body">
+      <div class="vs">
+        <div class="vs-col off reveal">
+          <h3>자료가 없을 때</h3>
+          <p>미팅마다 같은 설명을 반복하고, 매번 조금씩 다르게 전달됩니다</p>
+          <p>비교할 기준이 없어 거래처 설득이 어렵습니다</p>
+          <p>“자료 보내 주세요”를 받으면 급하게 찾아 보내다 빠뜨리기 쉽습니다</p>
+        </div>
+        <div class="vs-col on reveal">
+          <h3>자료가 있을 때</h3>
+          <p>설명은 자료가 하고, 처음 만난 곳에도 같은 내용이 전달됩니다</p>
+          <p>사양, 실적, 인증 등 핵심을 한눈에 확인할 수 있습니다</p>
+          <p>요청받은 즉시 정보를 빠짐없이 보낼 수 있습니다</p>
+        </div>
+      </div>
+      <p class="statement reveal">말로 다 전하기 어려운 강점은 자료가 대신 보여 줍니다</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───── 03 작업물 ───── -->
+<section class="sec" id="work">
+  <div class="wrap grid-sec">
+    <header class="sec-head">
+      <p class="label"><span>03</span>작업물</p>
+      <h2>고정된 틀이 아니라<br>브랜드에서 시작합니다</h2>
+      <p class="sec-sub">업종과 브랜드가 달라지면 자료의 분위기도, 구성도 달라집니다. 브랜드마다 새로 설계한 샘플입니다.</p>
+    </header>
+    <div class="sec-body">
+      <div class="works" id="works"></div>
+      <p class="fine">결등 · 한올 · 도담 · 온새 · 물마루는 가상 브랜드로 만든 예시입니다. 몬딕은 실제 브랜드입니다.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="sub-block">
+      <p class="label"><span>상세페이지</span>길게 읽히는 판매 페이지</p>
+      <div class="phones">
+        <figure class="phone reveal">
+          <div class="scroll" tabindex="0" aria-label="온새 데일리 수분 세럼 상세페이지, 위아래로 스크롤"><img src="assets/work/detail-onsae.jpg" alt="온새 데일리 수분 세럼 상세페이지" loading="lazy" width="774" height="9000"></div>
+          <figcaption><b>온새</b><span>스킨케어 · 가상</span></figcaption>
+        </figure>
+        <figure class="phone reveal">
+          <div class="scroll" tabindex="0" aria-label="도담 고구마 말랑이 상세페이지, 위아래로 스크롤"><img src="assets/work/detail-dodam.jpg" alt="도담 고구마 말랑이 상세페이지" loading="lazy" width="774" height="9000"></div>
+          <figcaption><b>도담</b><span>반려견 간식 · 가상</span></figcaption>
+        </figure>
+        <figure class="phone reveal">
+          <div class="scroll" tabindex="0" aria-label="물마루 드립 전기포트 상세페이지, 위아래로 스크롤"><img src="assets/work/detail-mulmaru.jpg" alt="물마루 드립 전기포트 상세페이지" loading="lazy" width="774" height="9000"></div>
+          <figcaption><b>물마루</b><span>주방 소형가전 · 가상</span></figcaption>
+        </figure>
+      </div>
+      <p class="fine">상세페이지는 안쪽을 위아래로 스크롤해 볼 수 있습니다.</p>
+    </div>
+
+    <div class="sub-block">
+      <p class="label"><span>비포 · 애프터</span>같은 내용, 다른 인상</p>
+      <div class="ba">
+        <article class="ba-before reveal">
+          <p class="tag">Before</p>
+          <div class="old">
+            <p class="old-h">[ 회사소개서 ]<br>기업 스토리</p>
+            <p><b>1. 획일화된 회색 도시 속에서, 개성을 응원하는 향기</b></p>
+            <p>■ 현대 사회의 도시인들은 비슷한 옷을 입고 비슷한 시간대에 출퇴근을 하며 자신의 개성을 잠시 묻어둔 채 살아갑니다.</p>
+            <p>■ 몬딕은 이러한 회색 도시 속에서 사람들의 개성을 응원하고, 그들의 개성을 향기로 표현하고 싶은 바람에서 시작되었습니다.</p>
+            <p>■ 우리는 현대인들의 흥미로운 개성을 일상과 공간 속에 섬세하게 표현하는 브랜드입니다.</p>
+          </div>
+        </article>
+        <article class="ba-after reveal">
+          <p class="tag">After · 바인더스</p>
+          <div class="new">
+            <p class="new-eye">BRAND STORY</p>
+            <h3>획일화된 회색 도시 속에서,<br>개성을 응원하는 향기</h3>
+            <div class="new-cols">
+              <p>현대 사회의 도시인들은 비슷한 옷을 입고 비슷한 시간대에 출퇴근을 하며 자신의 개성을 잠시 묻어둔 채 살아갑니다.</p>
+              <p>몬딕은 이러한 회색 도시 속에서 사람들의 개성을 응원하고, 그들의 개성을 향기로 표현하고 싶은 바람에서 시작되었습니다.</p>
+            </div>
+            <p class="new-foot">우리는 현대인들의 흥미로운 개성을 일상과 공간 속에 섬세하게 표현하는 브랜드입니다.</p>
+            <p class="new-brand">MONDIC</p>
+          </div>
+        </article>
+      </div>
+      <p class="fine">몬딕(MONDIC)의 소개 문구를 바탕으로 같은 내용을 다시 구성한 예시입니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───── 04 왜 바인더스인가 (어두운 면) ───── -->
+<section class="sec dark" id="us">
+  <div class="wrap grid-sec">
+    <header class="sec-head">
+      <p class="label"><span>04</span>왜 바인더스인가</p>
+      <h2>AI로 만들면<br>되지 않나요?</h2>
+      <p class="sec-sub">저희도 AI를 활용합니다. 다만, 사람이 하는 일은 다릅니다.</p>
+    </header>
+    <div class="sec-body">
+      <div class="who">
+        <div class="who-row reveal"><span class="who-k">AI</span><p>디자인 참고 · 연출컷 제작</p></div>
+        <div class="who-row hl reveal"><span class="who-k">사람</span><p>미팅 · 구성안 · 기획 · 검수 · 수정 · 책임</p></div>
+      </div>
+      <ol class="rows rows-dark">
+        <li class="reveal"><span class="n">01</span><h3>질문으로 강점을 찾습니다</h3><p>대표님께 직접 묻고, 설명하기 어려웠던 회사만의 강점과 사실까지 찾아 정리합니다.</p></li>
+        <li class="reveal"><span class="n">02</span><h3>카피와 흐름을 사람이 검토합니다</h3><p>평균적인 문장이 아니라, 회사에 맞는 언어로 다듬고 전체 흐름을 확인합니다.</p></li>
+        <li class="reveal"><span class="n">03</span><h3>수정부터 다음 문서까지 책임집니다</h3><p>구성안으로 자료를 제작하고, 명확한 수정 후 바인딩 노트로 다음 문서까지 이어서 만듭니다.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ───── 05 서비스 ───── -->
+<section class="sec" id="service">
+  <div class="wrap grid-sec">
+    <header class="sec-head">
+      <p class="label"><span>05</span>서비스</p>
+      <h2>상황에 따라 필요한<br>디자인은 달라집니다</h2>
+      <p class="sec-sub">대표 항목 기준입니다. 목록에 없는 자료도 상담 후 견적을 안내합니다.</p>
+    </header>
+    <div class="sec-body">
+      <ul class="svc">
+        <li class="reveal"><span class="n">01</span><div><h3>회사를 알리는 자료</h3><p>회사와 제품을 처음 소개해야 할 때</p></div><p class="docs">회사 소개서 · 제품 소개서 · 제품 카탈로그</p></li>
+        <li class="reveal"><span class="n">02</span><div><h3>설득을 하는 자료</h3><p>상대를 설득하고 결정을 이끌어야 할 때</p></div><p class="docs">IR 자료 · 내부 발표 자료 · 입점 · 납품 제안서</p></li>
+        <li class="reveal"><span class="n">03</span><div><h3>전달이 중요한 자료</h3><p>정보를 정확하게 전달해야 할 때</p></div><p class="docs">강의 자료 · 교육 자료 · 기업 내부 공유 자료</p></li>
+        <li class="reveal"><span class="n">04</span><div><h3>판매에 필요한 자료</h3><p>제품을 보고 사도록 안내해야 할 때</p></div><p class="docs">상세페이지 · 연출컷 · 광고 자료</p></li>
+      </ul>
+
+      <h3 class="mini">이런 상황이라면, 이렇게 시작해요</h3>
+      <p class="sec-sub tight">현재 상황을 알려 주시면 필요한 자료를 함께 골라 드립니다.</p>
+      <ul class="svc svc-situ">
+        <li class="reveal"><span class="n">01</span><div><h3>처음 거래처를 만나요</h3><p>패키지 · 영업 기본</p></div><p class="docs">회사 소개서 + 제품 카탈로그</p></li>
+        <li class="reveal"><span class="n">02</span><div><h3>주력 제품을 알리고 싶어요</h3><p>패키지 · 주력 제품 강화</p></div><p class="docs">회사 소개서 + 제품 카탈로그 + 제품 소개서</p></li>
+        <li class="reveal"><span class="n">03</span><div><h3>신제품을 출시해요</h3><p>패키지 · 신제품 런칭</p></div><p class="docs">회사 소개서 + 제품 소개서 + 상세페이지 + 연출컷</p></li>
+        <li class="reveal"><span class="n">04</span><div><h3>다른 상황이에요</h3><p>목록에 없는 자료도 괜찮아요</p></div><p class="docs">상담을 통해 함께 정합니다</p></li>
+      </ul>
+      <p class="fine">견적은 자료 종류와 분량을 상담으로 정한 뒤 안내해 드립니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───── 06 바인딩 노트 ───── -->
+<section class="sec" id="note">
+  <div class="wrap grid-sec">
+    <header class="sec-head">
+      <p class="label"><span>06</span>바인딩 노트</p>
+      <h2>회사의 기준을 담은<br>바인딩 노트란?</h2>
+      <p class="sec-sub">회사 정보와 디자인 기준, 강점, 말투 등을 정리한 문서입니다. 이 노트를 기준으로 회사 소개서, 제품 소개서, 상세페이지 등 이후 모든 자료를 같은 목소리로 만듭니다.</p>
+    </header>
+    <div class="sec-body">
+      <p class="mini">고객에게 전달하는 노트에는 이런 내용이 담깁니다</p>
+      <ul class="tiles">
+        <li class="reveal"><span class="n">02</span><h3>우리 회사 한 장</h3><p>어떤 브랜드인지, 모든 자료의 출발점이 되는 내용</p></li>
+        <li class="reveal"><span class="n">03</span><h3>컬러와 폰트</h3><p>브랜드 컬러와 서체, 쓰는 법과 쓰지 않는 법</p></li>
+        <li class="reveal"><span class="n">04</span><h3>말투 가이드</h3><p>톤 척도와 이렇게 쓰세요 · 쓰지 마세요</p></li>
+        <li class="reveal"><span class="n">05</span><h3>핵심 메시지</h3><p>자료에서 반복해 전할 세 가지와 그 근거</p></li>
+        <li class="reveal"><span class="n">06</span><h3>고객과 시장</h3><p>누가, 언제, 왜 고르는지 정리한 내용</p></li>
+        <li class="reveal tile-blue"><span class="n">A4</span><h3>고객 전달용 6쪽</h3><p>기업마다 내용 구성은 달라질 수 있습니다</p></li>
+      </ul>
+
+      <div class="internal reveal">
+        <h3>내부 작업 기준서</h3>
+        <p>고객에게 전달하는 바인딩 노트에 더해, 자료를 만들 때 쓰는 기준과 자료를 바인더스가 따로 관리합니다.</p>
+        <ol>
+          <li><span>01</span>바인딩 노트</li>
+          <li><span>02</span>미팅 기록</li>
+          <li><span>03</span>자료별 적용 기준</li>
+          <li><span>04</span>제품 · 서비스 상세 정리</li>
+          <li><span>05</span>원본 자산 · 제작 이력</li>
+          <li><span>06</span>미결 사항 · 점검</li>
+        </ol>
+      </div>
+      <p class="fine">이 노트는 바인더스 자료 제작에 쓰는 기준 문서입니다. 다른 용도로 쓰실 때는 먼저 문의해 주세요.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───── 07 진행 방식 ───── -->
+<section class="sec" id="process">
+  <div class="wrap grid-sec">
+    <header class="sec-head">
+      <p class="label"><span>07</span>진행 방식</p>
+      <h2>시작부터 전달까지,<br>이렇게 진행합니다</h2>
+      <p class="sec-sub strong">구성안까지는 착수금 50%로 진행합니다. 구성안을 확인하신 뒤 계속 진행하시면 잔금 50%를 입금해 주세요.</p>
+    </header>
+    <div class="sec-body">
+      <ol class="steps">
+        <li class="reveal"><span class="big">1</span><h3>상담</h3><p>메일이나 전화로 문서 종류와 일정을 확인합니다</p></li>
+        <li class="reveal"><span class="big">2</span><h3>견적 · 계약</h3><p>견적서를 확인하고 착수금 50%를 입금합니다</p></li>
+        <li class="reveal"><span class="big">3</span><h3>미팅 · 자료</h3><p>비대면 미팅으로 회사 이야기를 듣고 원본 자료를 받습니다</p></li>
+        <li class="reveal decide"><span class="big">4</span><h3>구성안</h3><p>구성안을 확인합니다. 수정 2회 포함</p><em>여기서 확인하고 결정</em></li>
+        <li class="reveal"><span class="big">5</span><h3>초안 · 수정</h3><p>잔금 50% 입금 후 초안을 만듭니다. 수정 2회 포함</p></li>
+        <li class="reveal"><span class="big">6</span><h3>최종 전달</h3><p>자료가 확정되면 바인딩 노트와 함께 전달합니다</p></li>
+        <li class="reveal"><span class="big">7</span><h3>사후 수정</h3><p>전달 후 7일간 오탈자와 사실 오류에 한해서 수정합니다</p></li>
+        <li class="reveal next"><span class="big">→</span><h3>이어갑니다</h3><p>이후 자료는 바인딩 노트를 기준으로 이어서 만듭니다</p></li>
+      </ol>
+      <p class="fine">포함 횟수를 넘는 수정은 별도 견적으로 안내합니다.</p>
+
+      <dl class="facts">
+        <div><dt>준비해 주실 것</dt><dd>로고 파일, 제품 사진 등 자료 제작에 필요한 원본 자료를 보내 주세요.</dd></div>
+        <div><dt>납기</dt><dd>잔금과 필수 자료가 모두 준비된 날부터 영업일로 센 기간을 안내합니다.</dd></div>
+        <div><dt>AI 활용 공개</dt><dd>AI는 디자인 참고와 연출컷에 쓰고, 기획과 카피, 수정 등의 작업은 사람이 합니다.</dd></div>
+        <div><dt>원본 파일</dt><dd>원본 파일은 기본 제공하지 않고, 요청하시면 안내해 드립니다.</dd></div>
+      </dl>
+      <p class="fine">환불 등 자세한 기준은 계약서에서 안내합니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───── 08 문의 ───── -->
+<section class="sec contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="c-left">
+      <p class="label"><span>08</span>시작하기</p>
+      <h2>회사의 소중한 자료들,<br>함께 만들어 나갑니다</h2>
+      <p class="vision">좋은 회사가 서툰 자료로 인해 묻히지 않도록, 작은 회사의 이야기도 또렷하게 들리도록 하는 것. 그것이 바인더스가 일을 하는 이유입니다.</p>
+
+      <div class="ask">
+        <h3>처음 연락 주실 때 알려 주세요</h3>
+        <dl>
+          <div><dt>필요한 문서</dt><dd>회사 소개서, 제품 소개서, 카탈로그 등</dd></div>
+          <div><dt>필요한 시기</dt><dd>언제까지 필요하신지 알려 주세요</dd></div>
+          <div><dt>가지고 계신 기존 자료</dt><dd>생각만 있어도, 글 초안이나 기존 자료가 있어도 괜찮아요</dd></div>
+        </dl>
+      </div>
+
+      <div class="person">
+        <p class="pname">정우민<small>Brand Designer</small></p>
+        <p class="pline"><span>이메일</span><a href="mailto:jeong150702@gmail.com" id="mailLink">jeong150702@gmail.com</a><button type="button" class="copy" id="copyMail">복사</button></p>
+        <p class="pline"><span>전화</span><a href="tel:01089143165">010-8914-3165</a></p>
+      </div>
+    </div>
+
+    <form class="form" id="inquiry" novalidate>
+      <h3>문의 남기기</h3>
+      <p class="form-lead">남겨 주신 내용을 확인한 뒤 메일이나 전화로 답변드립니다.</p>
+
+      <div class="fld">
+        <label for="f-name">회사명 · 성함</label>
+        <input id="f-name" name="name" type="text" autocomplete="organization" placeholder="예: 바인더스 정우민" required>
+      </div>
+      <div class="fld">
+        <label for="f-contact">이메일 또는 전화</label>
+        <input id="f-contact" name="contact" type="text" inputmode="email" autocomplete="email" placeholder="답변받으실 연락처" required>
+      </div>
+
+      <fieldset class="fld">
+        <legend>필요한 자료 <span>선택</span></legend>
+        <div class="opts">
+          <label><input type="checkbox" name="docs" value="회사 소개서"><span>회사 소개서</span></label>
+          <label><input type="checkbox" name="docs" value="제품 소개서"><span>제품 소개서</span></label>
+          <label><input type="checkbox" name="docs" value="제품 카탈로그"><span>제품 카탈로그</span></label>
+          <label><input type="checkbox" name="docs" value="IR 자료"><span>IR 자료</span></label>
+          <label><input type="checkbox" name="docs" value="상세페이지"><span>상세페이지</span></label>
+          <label><input type="checkbox" name="docs" value="연출컷"><span>연출컷</span></label>
+          <label><input type="checkbox" name="docs" value="그 밖의 자료"><span>그 밖의 자료</span></label>
+        </div>
+      </fieldset>
+
+      <div class="fld">
+        <label for="f-msg">문의 내용</label>
+        <textarea id="f-msg" name="message" rows="4" placeholder="필요한 시기나 가지고 계신 자료를 함께 적어 주시면 상담이 빨라집니다" required></textarea>
+      </div>
+
+      <div class="hp" aria-hidden="true"><label>비워 두세요<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+      <label class="agree">
+        <input id="f-agree" type="checkbox" name="agree" required>
+        <span>개인정보 수집·이용에 동의합니다. 입력하신 정보는 문의 답변에만 사용하며, 문의 처리가 끝나면 지체 없이 파기합니다.</span>
+      </label>
+
+      <button class="btn btn-send" type="submit" id="submitBtn"><span>문의 보내기</span><span aria-hidden="true">→</span></button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <svg class="logo logo-w" viewBox="0 0 241 68" role="img" aria-label="Binders"><use href="#logo"/></svg>
+    <p>정우민 · Brand Designer<br><a href="mailto:jeong150702@gmail.com">jeong150702@gmail.com</a> · <a href="tel:01089143165">010-8914-3165</a></p>
+    <p class="copy">© 2026 Binders<br>BIND YOUR STORY</p>
+  </div>
+</footer>
+
+<!-- 모바일 하단 고정 문의 -->
+<a class="dock" href="#contact" id="dock">문의하기<span aria-hidden="true">→</span></a>
+
+<!-- 라이트박스 -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="샘플 보기" hidden>
+  <button class="lb-x" id="lbClose" aria-label="닫기">닫기 ✕</button>
+  <div class="lb-top"><p class="lb-name" id="lbName"></p><p class="lb-count" id="lbCount"></p></div>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="이전 장">←</button>
+  <figure class="lb-fig"><img id="lbImg" alt=""></figure>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="다음 장">→</button>
+  <div class="lb-thumbs" id="lbThumbs"></div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
