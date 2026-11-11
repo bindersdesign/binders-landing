@@ -18,7 +18,8 @@ const WORKS = [
   { id:'dodam', name:'도담', desc:'반려견 간식 · 협찬 제안서', note:'가상 브랜드',
     pages:['표지','도담 이야기','대표 간식','함께하고 싶은 분','보내 드리는 것','나누는 방식','천천히 함께해요'] }
 ];
-const img = (id, i) => `assets/work/${id}-${i + 1}.jpg`;
+WORKS.push({ id:'before-after', name:'비포 · 애프터', desc:'같은 내용, 다른 인상', note:'', pages:['3쌍 비교'], hidden:true });
+const img = (id, i) => id === 'before-after' ? 'assets/work/before-after.jpg' : `assets/work/${id}-${i + 1}.jpg`;
 const $ = (s, r = document) => r.querySelector(s);
 
 /* 표지 아래 흐르는 띠: 브랜드별 표지 + 안쪽 장 */
@@ -34,7 +35,7 @@ const $ = (s, r = document) => r.querySelector(s);
 
 /* 작업물 카드 */
 (() => {
-  $('#works').innerHTML = WORKS.map((W, i) => `
+  $('#works').innerHTML = WORKS.filter(W => !W.hidden).map((W, i) => `
     <button type="button" class="work reveal" data-open="${W.id}" data-page="0">
       <span class="shot"><img src="${img(W.id, 0)}" alt="${W.name} ${W.desc} 표지" loading="lazy"><span class="pill">${W.pages.length}쪽 보기 →</span></span>
       <span class="meta"><span class="n">0${i + 1}</span><span><h3>${W.name}</h3><p>${W.desc} · ${W.note}</p></span></span>
@@ -62,6 +63,8 @@ function lbOpen(id, page){
   lastFocus = document.activeElement;
   lbThumbs.innerHTML = cur.pages.map((p, k) => `<button type="button" aria-label="${k + 1}쪽 ${p}"><img src="${img(cur.id, k)}" alt=""></button>`).join('');
   [...lbThumbs.children].forEach((b, k) => b.addEventListener('click', () => lbShow(k)));
+  lbThumbs.style.display = cur.pages.length > 1 ? '' : 'none';
+  document.querySelectorAll('.lb-nav').forEach(b => b.style.visibility = cur.pages.length > 1 ? '' : 'hidden');
   lb.hidden = false; document.body.classList.add('lb-open');
   lbShow(+page || 0);
   $('#lbClose').focus();

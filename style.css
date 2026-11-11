@@ -76,8 +76,10 @@ em{font-style:normal}
 .reel img{width:100%;aspect-ratio:16/9;object-fit:cover}
 @keyframes reel{to{transform:translateX(-50%)}}
 
-.kinds{display:flex;flex-wrap:wrap;gap:0;margin-top:clamp(28px,4vw,48px);border-top:1px solid var(--line)}
-.kinds li{flex:1 1 auto;padding:18px 0;font-weight:600;font-size:17px;border-bottom:1px solid var(--line);color:var(--slate);min-width:150px}
+.kinds{display:grid;grid-template-columns:repeat(6,1fr);margin-top:clamp(28px,4vw,48px);border-top:2px solid var(--ink);border-left:1px solid var(--line)}
+.kinds li{padding:20px 16px;font-weight:600;font-size:17px;line-height:1.4;border-right:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--ink);display:flex;align-items:center;min-height:68px}
+.ba-fig img{width:100%;height:auto;border:1px solid var(--line)}
+.ba-btn{display:block;width:100%;cursor:zoom-in}
 
 /* 섹션 공통: 왼쪽 라벨 열 + 오른쪽 본문 */
 .sec{padding:var(--sec) 0;border-top:2px solid var(--ink)}
@@ -300,6 +302,7 @@ body.lb-open{overflow:hidden}
   .contact-grid{grid-template-columns:1fr}
   .phones{grid-template-columns:repeat(3,minmax(0,1fr))}
   .steps{grid-template-columns:repeat(2,1fr)}
+  .kinds{grid-template-columns:repeat(3,1fr)}
   .ba{grid-template-columns:1fr}
   .old,.new{height:auto}
 }
@@ -314,7 +317,8 @@ body.lb-open{overflow:hidden}
   .hero-sub{grid-template-columns:1fr;gap:28px}
   .hero-cta{gap:24px}
   .reel button{width:72vw}
-  .kinds li{min-width:45%}
+  .kinds{grid-template-columns:repeat(2,1fr)}
+  .kinds li{padding:16px 14px}
   .rows li,.svc li{grid-template-columns:40px 1fr;gap:6px 14px;padding:24px 0}
   .rows li p,.svc li .docs{grid-column:2}
   .vs{grid-template-columns:1fr}
