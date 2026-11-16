@@ -14,7 +14,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23fff'/%3E%3Cpath d='M12 12h28v28H12z' fill='none' stroke='%230B1437' stroke-width='3'/%3E%3Cpath d='M20 20h28v28H20z' fill='%23fff' stroke='%230B1437' stroke-width='3'/%3E%3Cpath d='M28 28h28v28H28z' fill='%232447F5'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=16">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -48,15 +48,15 @@
 <main>
 
 <!-- ───── 표지 ───── -->
-<section class="hero">
-  <div class="wrap">
-    <p class="hero-top"><span>Binders</span><span>BIND YOUR STORY</span></p>
-    <h1 class="hero-title">
-      <span class="ln">무언가를 제안할 때,</span>
-      <span class="ln">거래처에 회사를 소개할 때,</span>
-      <span class="ln ac">무엇을 보내시나요?</span>
-    </h1>
-    <div class="hero-sub">
+<section class="hero" id="hero">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="hero-top"><span>Sales &amp; Brand Document Studio</span><span>BIND YOUR STORY</span></p>
+      <h1 class="hero-title">
+        <span class="ln">무언가를 제안할 때,</span>
+        <span class="ln">거래처에 회사를 소개할 때,</span>
+        <span class="ln ac">무엇을 보내시나요?</span>
+      </h1>
       <p class="hero-lead">기업을 이해하고, 모든 영업·판매 자료를 이어서 만드는 파트너. 바인더스는 <b>대신 말해 주는 자료</b>를 만듭니다.</p>
       <div class="hero-cta">
         <a class="btn" href="#contact">문의하기<span aria-hidden="true">→</span></a>
@@ -64,15 +64,25 @@
       </div>
     </div>
   </div>
+  <div class="hero-cols" id="heroCols" aria-hidden="true"></div>
+</section>
 
-  <div class="reel" aria-label="바인더스가 만든 샘플 자료 미리보기">
-    <div class="reel-track" id="reelTrack"></div>
-  </div>
+<section class="hero-after">
 
   <div class="wrap">
-    <ul class="kinds" aria-label="만드는 자료">
-      <li>회사 소개서</li><li>제품 소개서</li><li>제품 카탈로그</li><li>IR 자료</li><li>상세페이지</li><li>연출컷</li>
+    <div class="kinds-head">
+      <p class="intro-label">What we make</p>
+      <h2>바인더스가 만드는 자료</h2>
+    </div>
+    <ul class="kinds2" aria-label="만드는 자료">
+      <li><a href="#service"><span class="k-top"><span class="k-n">01</span><span class="k-en">Company Profile</span><span class="k-ar" aria-hidden="true">→</span></span><b>회사 소개서</b><span class="k-d">거래처에 회사를 처음 소개할 때</span></a></li>
+      <li><a href="#service"><span class="k-top"><span class="k-n">02</span><span class="k-en">Product Brochure</span><span class="k-ar" aria-hidden="true">→</span></span><b>제품 소개서</b><span class="k-d">제품 하나를 깊이 설명할 때</span></a></li>
+      <li><a href="#service"><span class="k-top"><span class="k-n">03</span><span class="k-en">Product Catalog</span><span class="k-ar" aria-hidden="true">→</span></span><b>제품 카탈로그</b><span class="k-d">여러 제품을 한눈에 보여 줄 때</span></a></li>
+      <li><a href="#service"><span class="k-top"><span class="k-n">04</span><span class="k-en">IR Deck</span><span class="k-ar" aria-hidden="true">→</span></span><b>IR 자료</b><span class="k-d">투자자에게 사업을 설명할 때</span></a></li>
+      <li><a href="#service"><span class="k-top"><span class="k-n">05</span><span class="k-en">Detail Page</span><span class="k-ar" aria-hidden="true">→</span></span><b>상세페이지</b><span class="k-d">온라인에서 제품을 팔 때</span></a></li>
+      <li><a href="#service"><span class="k-top"><span class="k-n">06</span><span class="k-en">Styled Shots</span><span class="k-ar" aria-hidden="true">→</span></span><b>연출컷</b><span class="k-d">제품을 보여 줄 사진이 필요할 때</span></a></li>
     </ul>
+    <p class="intro-text">단 건 작업으로 끝나지 않습니다. <span>한 번 이해한 회사의 이야기로,<br>다음 자료까지 이어서 만듭니다.</span></p>
   </div>
 </section>
 
@@ -136,7 +146,7 @@
     </header>
     <div class="sec-body">
       <div class="works" id="works"></div>
-      <p class="fine">결등 · 한올 · 도담 · 온새 · 물마루는 가상 브랜드로 만든 예시입니다. 몬딕은 실제 브랜드입니다.</p>
+      <p class="fine">결등 · 한올 · 도담 · 온새 · 물마루 · 오롯은 가상 브랜드로 만든 예시입니다. 몬딕은 실제 브랜드입니다.</p>
     </div>
   </div>
 
@@ -155,6 +165,10 @@
         <figure class="phone reveal">
           <div class="scroll" tabindex="0" aria-label="물마루 드립 전기포트 상세페이지, 위아래로 스크롤"><img src="assets/work/detail-mulmaru.jpg" alt="물마루 드립 전기포트 상세페이지" loading="lazy" width="774" height="9000"></div>
           <figcaption><b>물마루</b><span>주방 소형가전 · 가상</span></figcaption>
+        </figure>
+        <figure class="phone reveal">
+          <div class="scroll" tabindex="0" aria-label="오롯 브이넥 가디건 상세페이지, 위아래로 스크롤"><img src="assets/work/detail-orot.jpg" alt="오롯 브이넥 가디건 상세페이지" loading="lazy" width="774" height="9000"></div>
+          <figcaption><b>오롯</b><span>여성 의류 · 가상</span></figcaption>
         </figure>
       </div>
       <p class="fine">상세페이지는 안쪽을 위아래로 스크롤해 볼 수 있습니다.</p>
@@ -380,6 +394,6 @@
   <div class="lb-thumbs" id="lbThumbs"></div>
 </div>
 
-<script src="main.js?v=2"></script>
+<script src="main.js?v=17"></script>
 </body>
 </html>

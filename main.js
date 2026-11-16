@@ -16,7 +16,9 @@ const WORKS = [
   { id:'mondic', name:'몬딕', desc:'향기 브랜드 · 제품 카탈로그', note:'실제 브랜드',
     pages:['표지','브랜드','라인업','향 도감','제안 향','품질과 공간','입점 제안'] },
   { id:'dodam', name:'도담', desc:'반려견 간식 · 협찬 제안서', note:'가상 브랜드',
-    pages:['표지','도담 이야기','대표 간식','함께하고 싶은 분','보내 드리는 것','나누는 방식','천천히 함께해요'] }
+    pages:['표지','도담 이야기','대표 간식','함께하고 싶은 분','보내 드리는 것','나누는 방식','천천히 함께해요'] },
+  { id:'onsae', name:'온새', desc:'스킨케어 · 영문 회사 소개서', note:'가상 브랜드',
+    pages:['표지','브랜드 소개','대표 제품','제품 구성','만드는 과정','근거와 협업','문의'] }
 ];
 WORKS.push({ id:'before-after', name:'비포 · 애프터', desc:'같은 내용, 다른 인상', note:'', pages:['3쌍 비교'], hidden:true });
 const img = (id, i) => id === 'before-after' ? 'assets/work/before-after.jpg' : `assets/work/${id}-${i + 1}.jpg`;
@@ -24,13 +26,35 @@ const $ = (s, r = document) => r.querySelector(s);
 
 /* 표지 아래 흐르는 띠: 브랜드별 표지 + 안쪽 장 */
 (() => {
-  const track = $('#reelTrack');
+  const track = $('#reelTrack'); if (!track) return;
   const order = [[0,0],[1,0],[2,0],[3,0],[0,2],[1,4],[2,3],[3,2],[0,4],[1,2],[2,5],[3,4]];
   const mk = () => order.map(([w, p]) => {
     const W = WORKS[w];
     return `<button type="button" data-open="${W.id}" data-page="${p}" aria-label="${W.name} ${W.pages[p]} 크게 보기"><img src="${img(W.id, p)}" alt="" ${p === 0 ? '' : 'loading="lazy"'} draggable="false"></button>`;
   }).join('');
   track.innerHTML = mk() + mk();
+})();
+
+/* 표지 오른쪽 세 줄: 회사 소개서는 자르지 않고 가로 그대로, 상세페이지는 같은 폭으로 세로 */
+(() => {
+  const box = $('#heroCols'); if (!box) return;
+  const slide = (w, p) => { const W = WORKS[w]; return `<button type="button" class="ct" tabindex="-1" data-open="${W.id}" data-page="${p}"><img src="${img(W.id, p)}" alt="" draggable="false"></button>`; };
+  const tall = (f) => `<span class="ct tall"><img src="assets/work/detail-${f}.jpg" alt="" draggable="false"></span>`;
+  // 한 장도 겹치지 않게: 소개서 5종 × 7쪽 = 35장 + 상세페이지 4종을 세 줄에 한 번씩만 나눠 담는다.
+  // 각 줄의 길이가 화면 높이보다 길어서, 반복되는 같은 장이 한 화면에 동시에 보이지 않는다.
+  const all = [], onsae = [];
+  const decks = WORKS.filter(W => !W.hidden).length;
+  const oi = WORKS.findIndex(W => W.id === 'onsae');
+  for (let p = 0; p < 7; p++) for (let w = 0; w < decks; w++) (w === oi ? onsae : all).push(slide(w, p));
+  const cols = [[], [], []];
+  all.forEach((s, k) => cols[k % 3].push(s));
+  // 온새 소개서는 가운데 줄(온새 상세페이지)과 붙지 않게 양쪽 줄에 띄엄띄엄
+  onsae.forEach((s, k) => { const c = k % 2 ? 2 : 0; cols[c].splice(2 + Math.floor(k / 2) * 3, 0, s); });
+  cols[0].splice(3, 0, tall('mulmaru'));
+  cols[1].splice(1, 0, tall('onsae')); // 온새 첫 화면은 가운데 줄에
+  cols[1].splice(7, 0, tall('orot'));
+  cols[2].splice(4, 0, tall('dodam'));
+  box.innerHTML = cols.map(c => `<div class="col"><div class="col-track">${c.join('')}${c.join('')}</div></div>`).join('');
 })();
 
 /* 작업물 카드 */
@@ -110,10 +134,12 @@ document.addEventListener('keydown', e => {
   els.forEach((e, i) => { e.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(e); });
 })();
 (() => {
-  const head = $('.head'); let y0 = scrollY;
+  const head = $('.head'), hero = $('#hero'); let y0 = scrollY;
+  const dark = () => head.classList.toggle('on-dark', !!hero && scrollY < hero.offsetHeight - 72);
+  dark();
   addEventListener('scroll', () => {
     const y = scrollY;
-    head.classList.toggle('hide', y > y0 && y > 240);
+    dark();
     y0 = y;
   }, { passive: true });
   const links = [...document.querySelectorAll('.nav a')];
