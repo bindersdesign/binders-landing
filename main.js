@@ -9,15 +9,15 @@ const INQUIRY_TO    = 'jeong150702@gmail.com';
 
 /* ───────── 작업물 데이터 ───────── */
 const WORKS = [
-  { id:'gyeoldeung', name:'결등', desc:'조명 제조 · 회사 소개서', note:'가상 브랜드',
+  { id:'gyeoldeung', name:'결등', desc:'조명 제조 · 회사 소개서',
     pages:['표지','한눈에 보기','제품군','제조 역량','납품 실적','인증과 품질','진행 과정과 문의'] },
-  { id:'hanol', name:'한올 스튜디오', desc:'촬영 스튜디오 · 회사 소개서', note:'가상 브랜드',
+  { id:'hanol', name:'한올 스튜디오', desc:'촬영 스튜디오 · 회사 소개서',
     pages:['표지','한올은','무엇을 찍나요','공간과 장비','작업 사례','진행 방식','촬영 문의'] },
-  { id:'mondic', name:'몬딕', desc:'향기 브랜드 · 제품 카탈로그', note:'실제 브랜드',
+  { id:'mondic', name:'몬딕', desc:'향기 브랜드 · 제품 카탈로그',
     pages:['표지','브랜드','라인업','향 도감','제안 향','품질과 공간','입점 제안'] },
-  { id:'dodam', name:'도담', desc:'반려견 간식 · 협찬 제안서', note:'가상 브랜드',
+  { id:'dodam', name:'도담', desc:'반려견 간식 · 협찬 제안서',
     pages:['표지','도담 이야기','대표 간식','함께하고 싶은 분','보내 드리는 것','나누는 방식','천천히 함께해요'] },
-  { id:'onsae', name:'온새', desc:'스킨케어 · 영문 회사 소개서', note:'가상 브랜드',
+  { id:'onsae', name:'온새', desc:'스킨케어 · 영문 회사 소개서',
     pages:['표지','브랜드 소개','대표 제품','제품 구성','만드는 과정','근거와 협업','문의'] }
 ];
 WORKS.push({ id:'before-after', name:'비포 · 애프터', desc:'같은 내용, 다른 인상', note:'', pages:['3쌍 비교'], hidden:true });
@@ -62,7 +62,7 @@ const $ = (s, r = document) => r.querySelector(s);
   $('#works').innerHTML = WORKS.filter(W => !W.hidden).map((W, i) => `
     <button type="button" class="work reveal" data-open="${W.id}" data-page="0">
       <span class="shot"><img src="${img(W.id, 0)}" alt="${W.name} ${W.desc} 표지" loading="lazy"><span class="pill">${W.pages.length}쪽 보기 →</span></span>
-      <span class="meta"><span class="n">0${i + 1}</span><span><h3>${W.name}</h3><p>${W.desc} · ${W.note}</p></span></span>
+      <span class="meta"><span class="n">0${i + 1}</span><span><h3>${W.name}</h3><p>${W.desc}</p></span></span>
     </button>`).join('');
 })();
 
