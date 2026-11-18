@@ -73,6 +73,8 @@ em{font-style:normal}
 .hero-title .ac{color:#8EA2FF;font-weight:700}
 .hero-lead{font-size:clamp(18px,1.5vw,21px);color:rgba(255,255,255,.68);margin:0}
 .hero-lead b{color:#fff;font-weight:700}
+.m-br{display:none}
+@media (max-width:720px){.m-br{display:inline}}
 .hero-cta{display:flex;align-items:center;gap:32px}
 .hero .link{border-color:#fff}
 .hero .link:hover{color:#8EA2FF;border-color:#8EA2FF}
