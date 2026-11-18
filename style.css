@@ -393,8 +393,8 @@ body.lb-open{overflow:hidden}
   .hero-top span:last-child{display:none}
   .hero-cta{gap:24px}
   .hero .link{display:none}
-  .hero .btn{background:transparent;border:1.5px solid var(--cobalt);min-height:54px;padding:0 28px}
-  .hero .btn:hover{background:rgba(43,69,240,.15);border-color:var(--cobalt)}
+  .hero .btn{background:transparent;border:1.5px solid #8EA2FF;min-height:54px;padding:0 28px}
+  .hero .btn:hover{background:rgba(142,162,255,.12);border-color:#8EA2FF}
   .reel button{width:72vw}
   .kinds{grid-template-columns:repeat(2,1fr)}
   .kinds li{padding:16px 14px}
