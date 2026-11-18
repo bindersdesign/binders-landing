@@ -74,7 +74,8 @@ em{font-style:normal}
 .hero-lead{font-size:clamp(18px,1.5vw,21px);color:rgba(255,255,255,.68);margin:0}
 .hero-lead b{color:#fff;font-weight:700}
 .m-br{display:none}
-@media (max-width:720px){.m-br{display:inline}}
+@media (max-width:720px){.m-br{display:inline}.pc-br{display:none}.hero-title{font-size:32px}}
+@media (min-width:1101px){.sec h2,.contact h2{white-space:nowrap}}
 .hero-cta{display:flex;align-items:center;gap:32px}
 .hero .link{border-color:#fff}
 .hero .link:hover{color:#8EA2FF;border-color:#8EA2FF}
@@ -144,7 +145,7 @@ em{font-style:normal}
 .label span{color:var(--ink);font-size:16px}
 .dark .label span,.contact .label span{color:#fff}
 .dark .label{color:#8FA3FF}
-.sec h2{font-size:clamp(30px,3.9vw,56px);line-height:1.2;margin-bottom:28px}
+.sec h2{font-size:clamp(30px,3.9vw,48px);line-height:1.2;margin-bottom:28px}
 .sec h2 em{color:var(--cobalt)}
 .sec-sub{font-size:clamp(17px,1.5vw,20px);color:var(--slate);max-width:30em}
 .sec-sub.strong{color:var(--ink);font-weight:600;border-left:3px solid var(--cobalt);padding-left:18px}
@@ -282,7 +283,7 @@ em{font-style:normal}
 .contact{background:var(--cobalt);color:#fff;border-top-color:var(--cobalt);padding-bottom:calc(var(--sec) * .8)}
 .contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.92fr);gap:clamp(40px,6vw,104px);align-items:start}
 .contact .label{color:#CBD6FF}
-.contact h2{font-size:clamp(30px,3.9vw,56px);line-height:1.2;margin-bottom:28px}
+.contact h2{font-size:clamp(30px,3.9vw,48px);line-height:1.2;margin-bottom:28px}
 .vision{font-size:clamp(18px,1.6vw,21px);color:#E6ECFF;max-width:30em;margin-bottom:48px}
 .ask,.person{padding-top:22px;border-top:1px solid rgba(255,255,255,.4);margin-bottom:36px}
 .ask h3{font-size:22px;margin-bottom:12px}
