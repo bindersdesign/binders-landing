@@ -149,9 +149,17 @@ document.addEventListener('keydown', e => {
     if (en.isIntersecting) { links.forEach(l => l.classList.remove('on')); a.classList.add('on'); }
   }), { rootMargin: '-40% 0px -55% 0px' });
   map.forEach((_, id) => { const s = document.getElementById(id); if (s) spy.observe(s); });
-  // 모바일 도크: 문의 영역에서는 숨김
-  const dock = $('#dock'), contact = $('#contact');
-  if (dock && 'IntersectionObserver' in window) new IntersectionObserver(es => dock.classList.toggle('off', es[0].isIntersecting), { threshold: 0, rootMargin: '0px 0px -60px 0px' }).observe(contact);
+  // 모바일 도크: 첫 화면(표지 버튼이 보일 때)과 문의 영역에서는 숨김
+  const dock = $('#dock'), contact = $('#contact'), heroCta = $('.hero-cta');
+  if (dock && 'IntersectionObserver' in window) {
+    const seen = new Map();
+    const io = new IntersectionObserver(es => {
+      es.forEach(e => seen.set(e.target, e.isIntersecting));
+      dock.classList.toggle('off', [...seen.values()].some(Boolean));
+    }, { threshold: 0, rootMargin: '0px 0px -60px 0px' });
+    dock.classList.add('off');
+    [contact, heroCta].forEach(el => el && io.observe(el));
+  }
 })();
 
 /* 메일 주소 복사 */
