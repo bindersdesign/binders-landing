@@ -74,6 +74,7 @@ em{font-style:normal}
 .hero-lead{font-size:clamp(18px,1.5vw,21px);color:rgba(255,255,255,.68);margin:0}
 .hero-lead b{color:#fff;font-weight:700}
 .m-br{display:none}
+.nw{white-space:nowrap}
 @media (max-width:720px){.m-br{display:inline}.pc-br{display:none}.hero-title{font-size:32px}}
 @media (min-width:1101px){.sec h2,.contact h2{white-space:nowrap}}
 .hero-cta{display:flex;align-items:center;gap:32px}
@@ -278,6 +279,9 @@ em{font-style:normal}
 .facts>div{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--line)}
 .facts dt{font-weight:700}
 .facts dd{color:var(--slate)}
+.facts.faq{margin-top:0}
+.facts.faq>div{grid-template-columns:1fr;gap:8px;padding:26px 0}
+.foot .kw{grid-column:1/-1;font-size:14px;color:#6F7CA6;margin:0}
 
 /* 문의 */
 .contact{background:var(--cobalt);color:#fff;border-top-color:var(--cobalt);padding-bottom:calc(var(--sec) * .8)}
@@ -378,6 +382,7 @@ body.lb-open{overflow:hidden}
 /* 모바일 */
 @media (max-width:720px){
   body{font-size:17px}
+  .sec h2,.contact h2{font-size:35px}
   .head-in{height:60px}
   .logo{height:28px}
   .cta-top{height:40px;padding:0 16px}

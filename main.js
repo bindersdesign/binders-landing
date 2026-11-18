@@ -61,7 +61,7 @@ const $ = (s, r = document) => r.querySelector(s);
 (() => {
   $('#works').innerHTML = WORKS.filter(W => !W.hidden).map((W, i) => `
     <button type="button" class="work reveal" data-open="${W.id}" data-page="0">
-      <span class="shot"><img src="${img(W.id, 0)}" alt="${W.name} ${W.desc} 표지" loading="lazy"><span class="pill">${W.pages.length}쪽 보기 →</span></span>
+      <span class="shot"><img src="${img(W.id, 0)}" alt="${W.name} ${W.desc} 디자인 표지" loading="lazy"><span class="pill">${W.pages.length}쪽 보기 →</span></span>
       <span class="meta"><span class="n">0${i + 1}</span><span><h3>${W.name}</h3><p>${W.desc}</p></span></span>
     </button>`).join('');
 })();
