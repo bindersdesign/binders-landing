@@ -392,6 +392,9 @@ body.lb-open{overflow:hidden}
   .hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to bottom,rgba(16,17,20,.35) 0,rgba(16,17,20,.92) 40%,var(--night) 62%)}
   .hero-top span:last-child{display:none}
   .hero-cta{gap:24px}
+  .hero .link{display:none}
+  .hero .btn{background:transparent;border:1.5px solid var(--cobalt);min-height:54px;padding:0 28px}
+  .hero .btn:hover{background:rgba(43,69,240,.15);border-color:var(--cobalt)}
   .reel button{width:72vw}
   .kinds{grid-template-columns:repeat(2,1fr)}
   .kinds li{padding:16px 14px}
